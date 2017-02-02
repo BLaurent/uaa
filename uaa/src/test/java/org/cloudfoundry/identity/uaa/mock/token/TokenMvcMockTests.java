@@ -2993,7 +2993,8 @@ public class TokenMvcMockTests extends AbstractTokenMockMvcTests {
                 "",
                 "openid",
                 "client_credentials,password",
-                "clients.write");
+                "clients.write",
+                 "http://redirect.uri");
             client.setClientSecret("secret");
             createClient(getMockMvc(), adminToken, client);
 
@@ -3032,7 +3033,8 @@ public class TokenMvcMockTests extends AbstractTokenMockMvcTests {
                 "",
                 "uaa.resource",
                 "client_credentials,password",
-                "uaa.resource");
+                "uaa.resource",
+                "http://redirect.uri");
         resourceClient.setClientSecret("secret");
         createClient(getMockMvc(), adminToken, resourceClient);
 
@@ -3041,7 +3043,8 @@ public class TokenMvcMockTests extends AbstractTokenMockMvcTests {
             "",
             "openid",
             "client_credentials,password",
-            "tokens.revoke");
+            "tokens.revoke",
+             "http://redirect.uri");
         client.setClientSecret("secret");
         createClient(getMockMvc(), adminToken, client);
 
@@ -3087,7 +3090,8 @@ public class TokenMvcMockTests extends AbstractTokenMockMvcTests {
                 "",
                 "uaa.resource",
                 "client_credentials,password",
-                "uaa.resource");
+                "uaa.resource",
+                "http://redirect.uri");
         resourceClient.setClientSecret("secret");
         createClient(getMockMvc(), adminToken, resourceClient);
 
@@ -3096,7 +3100,8 @@ public class TokenMvcMockTests extends AbstractTokenMockMvcTests {
             "",
             "openid",
             "client_credentials,password",
-            null);
+            null,
+            "http://redirect.uri");
         client.setClientSecret("secret");
         createClient(getMockMvc(), adminToken, client);
 
@@ -3259,7 +3264,8 @@ public class TokenMvcMockTests extends AbstractTokenMockMvcTests {
             "",
             "openid",
             "client_credentials,password",
-            "clients.read");
+            "clients.read",
+            "http://redirect.uri");
         client.setClientSecret("secret");
 
         createClient(getMockMvc(), adminToken, client);
